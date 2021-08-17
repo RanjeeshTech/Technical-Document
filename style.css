@@ -100,6 +100,9 @@ a{
         height: 450px;
     }
 }
+.break{
+    display: none;
+}
 .section3{
     background-color: #f78888;
     box-shadow: 1px 1px 10px 1px #f78888;
@@ -150,8 +153,29 @@ li ul a{
 li ul a:hover{
     text-decoration: underline;
 }
-
+@media only screen and (max-width: 1296px){
+    .main_header{
+        grid-template-columns: 33% 33% 33%;
+    }
+    .container{
+        grid-template-columns:100%;
+    }
+    .section1,.section3{
+        display:none;
+    }
+}
+@media only screen and (max-width: 820px) {
+    .specs{
+        grid-row-gap: 50px;
+    }
+    .main_header{
+        height:120px;
+    }
+}
 @media only screen and (max-width: 600px) {
+    .main_header{
+        grid-template-columns: 27% 40% 33%;
+    }
     .main_header{
         height:120px;
         justify-content: center;
@@ -169,16 +193,19 @@ li ul a:hover{
         float: right;
         margin-right: 20px;
     }
+    .break{
+        display: block;
+        border: 1px solid rgb(255, 255, 255);
+    }
     .head_content{
         margin-top: 20px;
     }
     .container{
-        height: 450px;
-        grid-template-columns: 0% 100% 0%;
+        height: 570px;
+        grid-template-columns:100%;
     }
-    .section2{
-        width: 100%;
-        height: 100%;
+    .section1,.section3{
+        display:none;
     }
     .section2 img{
         margin-top: 120px;
@@ -186,18 +213,20 @@ li ul a:hover{
         height: auto;
     }
     .specs{
-        font-size: 12px;
-        grid-column-gap: 20px;
-        background-color: #ececec;
-        color: black;
-        padding:20px;
+        grid-row-gap: 30px;
+    }
+    .specs{
+        font-size: 16px;
+        grid-template-columns: 100%;
+        background-color: #000000;
+        color: rgb(255, 255, 255);
     }
     .spec_img img{
-        width:100%;
-        height: 100%;
+        width:80%;
+        height: 80%;
     }
     footer{
-        background-color: #ececec;
+        background-color: #000000;
     }
     @keyframes fadeout {
         0%{
@@ -210,9 +239,25 @@ li ul a:hover{
         }
     }
     footer h4{
-        color:black;
+        color:rgb(255, 255, 255);
     }
     li ul a{
-        color:black;
+        color:rgb(255, 255, 255);
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .container{
+        height: 500px;
+        grid-template-columns:100%;
+    }  
+}
+@media only screen and (max-width: 420px){
+    .container{
+        height: 440px;
+    }
+    .main_header{
+        height:120px;
+        grid-template-columns: 30% 35% 33%;
     }
 }
