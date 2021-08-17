@@ -1,0 +1,218 @@
+*{
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+    font-family: cursive;
+}
+a{
+    text-decoration: none;
+}
+
+.main_header{
+    background-color: #000000;
+    color:#ececec;
+    width:100%;
+    height:80px;
+    position:fixed;
+    display:grid;
+    grid-template-columns: 25% 50% 25%;
+    box-shadow: 1px 1px 15px 0.2px #303030;
+}
+
+.head_icon{
+    float: left;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+.head_icon p{
+    float: right;
+    margin-top: 15px;
+    margin-right: 260px;
+    color: #e6c646;
+}
+.head_button{
+    margin-top: 20px;
+    text-align: center;
+}
+.head_button button{
+    background-color: #0b0c1000;
+    color:rgb(255, 255, 255);
+    border-color: #ffffff;
+    width:100px;
+    height:40px;
+    margin-left: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.head_button button:hover{
+    color:#f78888;
+    border-color: #f78888;
+}
+.head_content{
+    text-align: center;
+}
+.head_content p{
+    color:#90ccf4;
+    font-size: 20px;
+}
+.container{
+    display: grid;
+    height:720px;
+    grid-template-columns: 33% 34% 33%;
+}
+.section1{
+    background-color: #f3d250;
+    text-shadow:black 1px 0 10px;
+    box-shadow: 1px 1px 10px 1px #f3d250;
+    margin-top:80px;
+    text-align: center;
+    display:grid;
+    grid-template-columns: 50%;
+    justify-content: center;
+}
+.section1 a,.section3 a{
+    color:black;
+}
+.section2{
+    background-color: #90ccf4;
+    box-shadow: 1px 1px 10px 1px #90ccf4;
+    text-shadow:black 1px 0 10px;
+    text-align: center;
+}
+.section2 a{
+    font-size: 20px;
+    color:black;
+}
+.section2 img{
+    margin-top: 175px;
+    width:450px;
+    height:450px;
+    animation:fadeout 2s;
+}
+@keyframes fadeout {
+    0%{
+        width:0%;
+        height:0%;
+    }    
+    100%{
+        width: 450px;
+        height: 450px;
+    }
+}
+.section3{
+    background-color: #f78888;
+    box-shadow: 1px 1px 10px 1px #f78888;
+    text-shadow:black 1px 0 10px;
+    margin-top:80px;
+    text-align: center;
+    display:grid;
+    grid-template-columns: 50%;
+    justify-content: center;
+}
+
+.specs{
+    background-color: #000000;
+    color: #ececec;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 20px;
+    padding:40px;
+    text-align: center;
+    align-items: center;
+}
+.spec_img img{
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: #000000;
+    box-shadow: 1px 1px 15px 0.2px #585858;
+    height:auto;
+    padding: 20px;
+    display:grid;
+    text-align: center;
+    grid-template-columns: 19% 19% 19% 19% 19%;
+    grid-column-gap:1%;
+}
+footer h4{
+    color:white;
+}
+li{
+    list-style: none;
+}
+li ul a{
+    color:white;
+    font-size:12px;
+}
+li ul a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .main_header{
+        height:120px;
+        justify-content: center;
+        background-color: #ececec;
+        color: black;
+    }
+    .main_header button{
+        color:black;
+        border:2px solid black;
+    }
+    .head_icon{
+        margin-top: 25px;
+    }
+    .head_icon p{
+        float: right;
+        margin-right: 20px;
+    }
+    .head_content{
+        margin-top: 20px;
+    }
+    .container{
+        height: 450px;
+        grid-template-columns: 0% 100% 0%;
+    }
+    .section2{
+        width: 100%;
+        height: 100%;
+    }
+    .section2 img{
+        margin-top: 120px;
+        width:70%;
+        height: auto;
+    }
+    .specs{
+        font-size: 12px;
+        grid-column-gap: 20px;
+        background-color: #ececec;
+        color: black;
+        padding:20px;
+    }
+    .spec_img img{
+        width:100%;
+        height: 100%;
+    }
+    footer{
+        background-color: #ececec;
+    }
+    @keyframes fadeout {
+        0%{
+            width:0%;
+            height:0%;
+        }    
+        100%{
+            width: 70%;
+            height: auto;
+        }
+    }
+    footer h4{
+        color:black;
+    }
+    li ul a{
+        color:black;
+    }
+}
